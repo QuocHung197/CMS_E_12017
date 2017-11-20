@@ -290,6 +290,10 @@ function wp_dashboard_right_now() {
 		<?php
 	}
 
+	$result =count_users();
+        echo '<li><a class="dashicons-smiley" href="users.php"> ',$result ['total_users'],"Users</a></li>";
+
+
 	/**
 	 * Filters the array of extra elements to list in the 'At a Glance'
 	 * dashboard widget.
