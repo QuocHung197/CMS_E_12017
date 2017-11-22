@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2017 at 03:20 AM
+-- Generation Time: Nov 22, 2017 at 10:44 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
   KEY `comment_date_gmt` (`comment_date_gmt`),
   KEY `comment_parent` (`comment_parent`),
   KEY `comment_author_email` (`comment_author_email`(10))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `wp_comments`
@@ -72,7 +72,9 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
 (1, 1, 'A WordPress Commenter', 'wapuu@wordpress.example', 'https://wordpress.org/', '', '2017-11-13 01:44:26', '2017-11-13 01:44:26', 'Hi, this is a comment.\nTo get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.\nCommenter avatars come from <a href="https://gravatar.com">Gravatar</a>.', 0, '1', '', '', 0, 0),
-(2, 82, 'Trong Phu', 'phu@gmail.com', '', '::1', '2017-11-20 01:22:18', '2017-11-20 01:22:18', 'CSM hello', 0, '1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', '', 0, 6);
+(2, 82, 'Trong Phu', 'phu@gmail.com', '', '::1', '2017-11-20 01:22:18', '2017-11-20 01:22:18', 'CSM hello', 0, '1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', '', 0, 6),
+(3, 74, 'admin', 'hunghung@gmail.com', '', '::1', '2017-11-22 07:53:33', '2017-11-22 07:53:33', 'hey!', 0, '1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36', '', 0, 1),
+(4, 95, 'admin', 'hunghung@gmail.com', '', '::1', '2017-11-22 09:08:47', '2017-11-22 09:08:47', '123', 0, '1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -111,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=169 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=280 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -139,7 +141,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (19, 'default_comment_status', 'open', 'yes'),
 (20, 'default_ping_status', 'open', 'yes'),
 (21, 'default_pingback_flag', '1', 'yes'),
-(22, 'posts_per_page', '10', 'yes'),
+(22, 'posts_per_page', '3', 'yes'),
 (23, 'date_format', 'F j, Y', 'yes'),
 (24, 'time_format', 'g:i a', 'yes'),
 (25, 'links_updated_date_format', 'F j, Y g:i a', 'yes'),
@@ -195,7 +197,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (75, 'default_comments_page', 'newest', 'yes'),
 (76, 'comment_order', 'asc', 'yes'),
 (77, 'sticky_posts', 'a:0:{}', 'yes'),
-(78, 'widget_categories', 'a:2:{i:2;a:4:{s:5:"title";s:0:"";s:5:"count";i:0;s:12:"hierarchical";i:0;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
+(78, 'widget_categories', 'a:2:{i:2;a:4:{s:5:"title";s:10:"Categories";s:5:"count";i:0;s:12:"hierarchical";i:0;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
 (79, 'widget_text', 'a:5:{i:2;a:4:{s:5:"title";s:7:"Find Us";s:4:"text";s:168:"<strong>Address</strong>\n123 Main Street\nNew York, NY 10001\n\n<strong>Hours</strong>\nMonday&mdash;Friday: 9:00AM&ndash;5:00PM\nSaturday &amp; Sunday: 11:00AM&ndash;3:00PM";s:6:"filter";b:1;s:6:"visual";b:1;}i:3;a:4:{s:5:"title";s:15:"About This Site";s:4:"text";s:85:"This may be a good place to introduce yourself and your site or include some credits.";s:6:"filter";b:1;s:6:"visual";b:1;}i:4;a:4:{s:5:"title";s:7:"Find Us";s:4:"text";s:168:"<strong>Address</strong>\n123 Main Street\nNew York, NY 10001\n\n<strong>Hours</strong>\nMonday&mdash;Friday: 9:00AM&ndash;5:00PM\nSaturday &amp; Sunday: 11:00AM&ndash;3:00PM";s:6:"filter";b:1;s:6:"visual";b:1;}i:5;a:4:{s:5:"title";s:15:"About This Site";s:4:"text";s:85:"This may be a good place to introduce yourself and your site or include some credits.";s:6:"filter";b:1;s:6:"visual";b:1;}s:12:"_multiwidget";i:1;}', 'yes'),
 (80, 'widget_rss', 'a:2:{i:1;a:0:{}s:12:"_multiwidget";i:1;}', 'yes'),
 (81, 'uninstall_plugins', 'a:0:{}', 'no'),
@@ -212,11 +214,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (92, 'wp_user_roles', 'a:5:{s:13:"administrator";a:2:{s:4:"name";s:13:"Administrator";s:12:"capabilities";a:61:{s:13:"switch_themes";b:1;s:11:"edit_themes";b:1;s:16:"activate_plugins";b:1;s:12:"edit_plugins";b:1;s:10:"edit_users";b:1;s:10:"edit_files";b:1;s:14:"manage_options";b:1;s:17:"moderate_comments";b:1;s:17:"manage_categories";b:1;s:12:"manage_links";b:1;s:12:"upload_files";b:1;s:6:"import";b:1;s:15:"unfiltered_html";b:1;s:10:"edit_posts";b:1;s:17:"edit_others_posts";b:1;s:20:"edit_published_posts";b:1;s:13:"publish_posts";b:1;s:10:"edit_pages";b:1;s:4:"read";b:1;s:8:"level_10";b:1;s:7:"level_9";b:1;s:7:"level_8";b:1;s:7:"level_7";b:1;s:7:"level_6";b:1;s:7:"level_5";b:1;s:7:"level_4";b:1;s:7:"level_3";b:1;s:7:"level_2";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:17:"edit_others_pages";b:1;s:20:"edit_published_pages";b:1;s:13:"publish_pages";b:1;s:12:"delete_pages";b:1;s:19:"delete_others_pages";b:1;s:22:"delete_published_pages";b:1;s:12:"delete_posts";b:1;s:19:"delete_others_posts";b:1;s:22:"delete_published_posts";b:1;s:20:"delete_private_posts";b:1;s:18:"edit_private_posts";b:1;s:18:"read_private_posts";b:1;s:20:"delete_private_pages";b:1;s:18:"edit_private_pages";b:1;s:18:"read_private_pages";b:1;s:12:"delete_users";b:1;s:12:"create_users";b:1;s:17:"unfiltered_upload";b:1;s:14:"edit_dashboard";b:1;s:14:"update_plugins";b:1;s:14:"delete_plugins";b:1;s:15:"install_plugins";b:1;s:13:"update_themes";b:1;s:14:"install_themes";b:1;s:11:"update_core";b:1;s:10:"list_users";b:1;s:12:"remove_users";b:1;s:13:"promote_users";b:1;s:18:"edit_theme_options";b:1;s:13:"delete_themes";b:1;s:6:"export";b:1;}}s:6:"editor";a:2:{s:4:"name";s:6:"Editor";s:12:"capabilities";a:34:{s:17:"moderate_comments";b:1;s:17:"manage_categories";b:1;s:12:"manage_links";b:1;s:12:"upload_files";b:1;s:15:"unfiltered_html";b:1;s:10:"edit_posts";b:1;s:17:"edit_others_posts";b:1;s:20:"edit_published_posts";b:1;s:13:"publish_posts";b:1;s:10:"edit_pages";b:1;s:4:"read";b:1;s:7:"level_7";b:1;s:7:"level_6";b:1;s:7:"level_5";b:1;s:7:"level_4";b:1;s:7:"level_3";b:1;s:7:"level_2";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:17:"edit_others_pages";b:1;s:20:"edit_published_pages";b:1;s:13:"publish_pages";b:1;s:12:"delete_pages";b:1;s:19:"delete_others_pages";b:1;s:22:"delete_published_pages";b:1;s:12:"delete_posts";b:1;s:19:"delete_others_posts";b:1;s:22:"delete_published_posts";b:1;s:20:"delete_private_posts";b:1;s:18:"edit_private_posts";b:1;s:18:"read_private_posts";b:1;s:20:"delete_private_pages";b:1;s:18:"edit_private_pages";b:1;s:18:"read_private_pages";b:1;}}s:6:"author";a:2:{s:4:"name";s:6:"Author";s:12:"capabilities";a:10:{s:12:"upload_files";b:1;s:10:"edit_posts";b:1;s:20:"edit_published_posts";b:1;s:13:"publish_posts";b:1;s:4:"read";b:1;s:7:"level_2";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:12:"delete_posts";b:1;s:22:"delete_published_posts";b:1;}}s:11:"contributor";a:2:{s:4:"name";s:11:"Contributor";s:12:"capabilities";a:5:{s:10:"edit_posts";b:1;s:4:"read";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:12:"delete_posts";b:1;}}s:10:"subscriber";a:2:{s:4:"name";s:10:"Subscriber";s:12:"capabilities";a:2:{s:4:"read";b:1;s:7:"level_0";b:1;}}}', 'yes'),
 (93, 'fresh_site', '0', 'yes'),
 (94, 'widget_search', 'a:2:{i:2;a:1:{s:5:"title";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
-(95, 'widget_recent-posts', 'a:2:{i:2;a:2:{s:5:"title";s:0:"";s:6:"number";i:5;}s:12:"_multiwidget";i:1;}', 'yes'),
-(96, 'widget_recent-comments', 'a:2:{i:2;a:2:{s:5:"title";s:0:"";s:6:"number";i:5;}s:12:"_multiwidget";i:1;}', 'yes'),
-(97, 'widget_archives', 'a:2:{i:2;a:3:{s:5:"title";s:0:"";s:5:"count";i:0;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
+(95, 'widget_recent-posts', 'a:2:{i:2;a:3:{s:5:"title";s:0:"";s:6:"number";i:3;s:9:"show_date";b:1;}s:12:"_multiwidget";i:1;}', 'yes'),
+(96, 'widget_recent-comments', 'a:2:{i:2;a:2:{s:5:"title";s:0:"";s:6:"number";i:3;}s:12:"_multiwidget";i:1;}', 'yes'),
+(97, 'widget_archives', 'a:2:{i:2;a:3:{s:5:"title";s:0:"";s:5:"count";i:1;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
 (98, 'widget_meta', 'a:2:{i:2;a:1:{s:5:"title";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
-(99, 'sidebars_widgets', 'a:5:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}s:13:"array_version";i:3;}', 'yes'),
+(99, 'sidebars_widgets', 'a:5:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:12:"categories-2";i:1;s:14:"recent-posts-2";i:2;s:10:"archives-2";i:3;s:17:"recent-comments-2";i:4;s:8:"search-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}s:13:"array_version";i:3;}', 'yes'),
 (100, 'widget_pages', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_media_audio', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
@@ -225,24 +227,25 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (105, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (106, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (107, 'widget_custom_html', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(108, 'cron', 'a:4:{i:1511144625;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1511185467;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1511228681;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
-(109, 'theme_mods_twentyseventeen', 'a:1:{s:18:"custom_css_post_id";i:-1;}', 'yes'),
-(113, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:0:{}s:15:"version_checked";s:5:"4.8.3";s:12:"last_checked";i:1511142314;}', 'no'),
-(114, '_site_transient_update_plugins', 'O:8:"stdClass":1:{s:12:"last_checked";i:1511142314;}', 'no'),
+(108, 'cron', 'a:4:{i:1511358267;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1511401481;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1511403825;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(109, 'theme_mods_twentyseventeen', 'a:2:{s:18:"custom_css_post_id";i:-1;s:18:"nav_menu_locations";a:1:{s:3:"top";i:0;}}', 'yes'),
+(113, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:0:{}s:15:"version_checked";s:5:"4.8.3";s:12:"last_checked";i:1511331795;}', 'no'),
+(114, '_site_transient_update_plugins', 'O:8:"stdClass":1:{s:12:"last_checked";i:1511337175;}', 'no'),
 (119, 'can_compress_scripts', '1', 'no'),
 (122, 'WPLANG', '', 'yes'),
-(132, '_transient_timeout_plugin_slugs', '1511227860', 'no'),
+(132, '_transient_timeout_plugin_slugs', '1511423575', 'no'),
 (133, '_transient_plugin_slugs', 'a:2:{i:0;s:19:"akismet/akismet.php";i:1;s:9:"hello.php";}', 'no'),
 (134, 'recently_activated', 'a:0:{}', 'yes'),
-(136, '_site_transient_timeout_wporg_theme_feature_list', '1510550834', 'no'),
-(137, '_site_transient_wporg_theme_feature_list', 'a:0:{}', 'no'),
-(140, '_site_transient_update_themes', 'O:8:"stdClass":1:{s:12:"last_checked";i:1511142315;}', 'no'),
-(146, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1511180845', 'no'),
-(147, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: wordpress.org</p></div><div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: planet.wordpress.org</p></div>', 'no'),
-(157, 'category_children', 'a:0:{}', 'yes'),
-(165, '_transient_is_multi_author', '0', 'yes'),
-(167, '_site_transient_timeout_theme_roots', '1511144115', 'no'),
-(168, '_site_transient_theme_roots', 'a:3:{s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no');
+(140, '_site_transient_update_themes', 'O:8:"stdClass":1:{s:12:"last_checked";i:1511343459;}', 'no'),
+(172, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1511375040', 'no'),
+(173, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: wordpress.org</p></div><div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: planet.wordpress.org</p></div>', 'no'),
+(207, '_site_transient_timeout_wporg_theme_feature_list', '1511344693', 'no'),
+(208, '_site_transient_wporg_theme_feature_list', 'a:0:{}', 'no'),
+(227, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes'),
+(268, '_site_transient_timeout_theme_roots', '1511343551', 'no'),
+(269, '_site_transient_theme_roots', 'a:3:{s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
+(278, '_transient_is_multi_author', '1', 'yes'),
+(279, 'category_children', 'a:1:{i:12;a:2:{i:0;i:15;i:1;i:21;}}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -258,7 +261,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=169 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=215 ;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -273,13 +276,24 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (157, 71, '_wp_trash_meta_status', 'publish'),
 (158, 71, '_wp_trash_meta_time', '1511137767'),
 (159, 71, '_wp_desired_post_slug', 'post-1'),
-(160, 82, '_edit_lock', '1511140965:1'),
+(160, 82, '_edit_lock', '1511337250:1'),
 (161, 82, '_edit_last', '1'),
-(164, 74, '_edit_last', '5'),
-(165, 74, '_edit_lock', '1511140798:5'),
-(166, 1, '_edit_lock', '1511140810:5'),
+(164, 74, '_edit_last', '1'),
+(165, 74, '_edit_lock', '1511336400:1'),
+(166, 1, '_edit_lock', '1511336361:1'),
 (167, 86, '_edit_lock', '1511141259:1'),
-(168, 86, '_edit_last', '1');
+(168, 86, '_edit_last', '1'),
+(169, 93, '_edit_lock', '1511336683:1'),
+(170, 93, '_edit_last', '1'),
+(173, 95, '_edit_lock', '1511337311:1'),
+(174, 95, '_edit_last', '1'),
+(177, 98, '_edit_lock', '1511333160:1'),
+(178, 101, '_wp_trash_meta_status', 'publish'),
+(179, 101, '_wp_trash_meta_time', '1511333189'),
+(180, 102, '_edit_lock', '1511333506:1'),
+(181, 103, '_edit_lock', '1511335301:1'),
+(182, 103, '_edit_last', '1'),
+(200, 1, '_edit_last', '1');
 
 -- --------------------------------------------------------
 
@@ -316,21 +330,21 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=91 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=114 ;
 
 --
 -- Dumping data for table `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(1, 1, '2017-11-13 01:44:26', '2017-11-13 01:44:26', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hello world!', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2017-11-13 01:44:26', '2017-11-13 01:44:26', '', 0, 'http://localhost:82/wordpress/?p=1', 0, 'post', '', 1),
+(1, 1, '2017-11-13 01:44:26', '2017-11-13 01:44:26', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hello world!', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2017-11-22 07:41:22', '2017-11-22 07:41:22', '', 0, 'http://localhost:82/wordpress/?p=1', 0, 'post', '', 1),
 (2, 1, '2017-11-13 01:44:26', '2017-11-13 01:44:26', 'This is an example page. It''s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\n\n<blockquote>Hi there! I''m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin'' caught in the rain.)</blockquote>\n\n...or something like this:\n\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\n\nAs a new WordPress user, you should go to <a href="http://localhost:82/wordpress/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!', 'Sample Page', '', 'publish', 'closed', 'open', '', 'sample-page', '', '', '2017-11-13 01:44:26', '2017-11-13 01:44:26', '', 0, 'http://localhost:82/wordpress/?page_id=2', 0, 'page', '', 0),
 (69, 1, '2017-11-20 00:27:18', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-20 00:27:18', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=69', 0, 'post', '', 0),
 (70, 3, '2017-11-20 00:27:32', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-20 00:27:32', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=70', 0, 'post', '', 0),
 (71, 3, '2017-11-20 00:28:34', '2017-11-20 00:28:34', 'Helooooooooooooooooooooooooo\r\n\r\n<img class="alignnone size-medium wp-image-72" src="http://localhost:82/wordpress/wp-content/uploads/2017/11/Koala-300x225.jpg" alt="" width="300" height="225" />', 'Post 1', '', 'trash', 'open', 'open', '', 'post-1__trashed', '', '', '2017-11-20 00:29:27', '2017-11-20 00:29:27', '', 0, 'http://localhost:82/wordpress/?p=71', 0, 'post', '', 0),
 (72, 3, '2017-11-20 00:28:17', '2017-11-20 00:28:17', '', 'Koala', '', 'inherit', 'open', 'closed', '', 'koala', '', '', '2017-11-20 00:28:17', '2017-11-20 00:28:17', '', 71, 'http://localhost:82/wordpress/wp-content/uploads/2017/11/Koala.jpg', 0, 'attachment', 'image/jpeg', 0),
 (73, 3, '2017-11-20 00:28:34', '2017-11-20 00:28:34', 'Helooooooooooooooooooooooooo\r\n\r\n<img class="alignnone size-medium wp-image-72" src="http://localhost:82/wordpress/wp-content/uploads/2017/11/Koala-300x225.jpg" alt="" width="300" height="225" />', 'Post 1', '', 'inherit', 'closed', 'closed', '', '71-revision-v1', '', '', '2017-11-20 00:28:34', '2017-11-20 00:28:34', '', 71, 'http://localhost:82/wordpress/index.php/2017/11/20/71-revision-v1/', 0, 'revision', '', 0),
-(74, 5, '2017-11-20 01:22:13', '0000-00-00 00:00:00', '5', 'User', '', 'draft', 'open', 'open', '', '', '', '', '2017-11-20 01:22:13', '2017-11-20 01:22:13', '', 0, 'http://localhost:82/wordpress/?p=74', 0, 'post', '', 0),
+(74, 5, '2017-11-22 07:41:55', '2017-11-22 07:41:55', '5', 'User', '', 'publish', 'open', 'open', '', 'user', '', '', '2017-11-22 07:41:55', '2017-11-22 07:41:55', '', 0, 'http://localhost:82/wordpress/?p=74', 0, 'post', '', 1),
 (75, 6, '2017-11-20 01:02:39', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-20 01:02:39', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=75', 0, 'post', '', 0),
 (76, 5, '2017-11-20 01:00:32', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-11-20 01:00:32', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?page_id=76', 0, 'page', '', 0),
 (77, 1, '2017-11-20 01:07:21', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-20 01:07:21', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=77', 0, 'post', '', 0),
@@ -338,7 +352,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (79, 5, '2017-11-20 01:01:16', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-20 01:01:16', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=79', 0, 'post', '', 0),
 (80, 5, '2017-11-20 01:03:04', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-11-20 01:03:04', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?page_id=80', 0, 'page', '', 0),
 (81, 5, '2017-11-20 01:16:33', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-20 01:16:33', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=81', 0, 'post', '', 0),
-(82, 1, '2017-11-20 01:24:41', '2017-11-20 01:24:41', 'Hello CMSHello CMSHello CMSHello CMSHello CMS', 'Hello CMS', '', 'publish', 'open', 'open', '', 'hello-cms', '', '', '2017-11-20 01:24:41', '2017-11-20 01:24:41', '', 0, 'http://localhost:82/wordpress/?p=82', 0, 'post', '', 1),
+(82, 1, '2017-11-20 01:24:41', '2017-11-20 01:24:41', 'Hello CMSHello CMSHello CMSHello CMSHello CMS', 'Hello CMS', '', 'publish', 'open', 'open', '', 'hello-cms', '', '', '2017-11-22 07:56:32', '2017-11-22 07:56:32', '', 0, 'http://localhost:82/wordpress/?p=82', 0, 'post', '', 1),
 (83, 1, '2017-11-20 01:24:41', '2017-11-20 01:24:41', 'Hello CMSHello CMSHello CMSHello CMSHello CMS', 'Hello CMS', '', 'inherit', 'closed', 'closed', '', '82-revision-v1', '', '', '2017-11-20 01:24:41', '2017-11-20 01:24:41', '', 82, 'http://localhost:82/wordpress/index.php/2017/11/20/82-revision-v1/', 0, 'revision', '', 0),
 (84, 5, '2017-11-20 01:22:13', '2017-11-20 01:22:13', '5', 'User', '', 'inherit', 'closed', 'closed', '', '74-revision-v1', '', '', '2017-11-20 01:22:13', '2017-11-20 01:22:13', '', 74, 'http://localhost:82/wordpress/index.php/2017/11/20/74-revision-v1/', 0, 'revision', '', 0),
 (85, 5, '2017-11-20 01:22:13', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-20 01:22:13', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=85', 0, 'post', '', 0),
@@ -346,7 +360,29 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (87, 1, '2017-11-20 01:29:54', '2017-11-20 01:29:54', 'Hello CMS', 'Hello CMS', '', 'inherit', 'closed', 'closed', '', '86-revision-v1', '', '', '2017-11-20 01:29:54', '2017-11-20 01:29:54', '', 86, 'http://localhost:82/wordpress/index.php/2017/11/20/86-revision-v1/', 0, 'revision', '', 0),
 (88, 1, '2017-11-20 01:26:41', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-11-20 01:26:41', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?page_id=88', 0, 'page', '', 0),
 (89, 1, '2017-11-20 01:27:42', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-20 01:27:42', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=89', 0, 'post', '', 0),
-(90, 1, '2017-11-20 01:27:45', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-11-20 01:27:45', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?page_id=90', 0, 'page', '', 0);
+(90, 1, '2017-11-20 01:27:45', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-11-20 01:27:45', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?page_id=90', 0, 'page', '', 0),
+(91, 4, '2017-11-22 06:24:50', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-22 06:24:50', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=91', 0, 'post', '', 0),
+(92, 1, '2017-11-22 06:27:30', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-22 06:27:30', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=92', 0, 'post', '', 0),
+(93, 1, '2017-11-22 06:33:09', '2017-11-22 06:33:09', 'Lap trinh WEB', 'Lap trinh WEB', '', 'publish', 'open', 'open', '', 'lap-trinh-web', '', '', '2017-11-22 07:45:01', '2017-11-22 07:45:01', '', 0, 'http://localhost:82/wordpress/?p=93', 0, 'post', '', 0),
+(94, 1, '2017-11-22 06:33:09', '2017-11-22 06:33:09', 'Lap trinh WEB', 'Lap trinh WEB', '', 'inherit', 'closed', 'closed', '', '93-revision-v1', '', '', '2017-11-22 06:33:09', '2017-11-22 06:33:09', '', 93, 'http://localhost:82/wordpress/index.php/2017/11/22/93-revision-v1/', 0, 'revision', '', 0),
+(95, 1, '2017-11-22 06:33:27', '2017-11-22 06:33:27', 'Chuyen De CMS', 'Chuyen De CMS', '', 'publish', 'open', 'open', '', 'chuyen-de-cms', '', '', '2017-11-22 07:56:59', '2017-11-22 07:56:59', '', 0, 'http://localhost:82/wordpress/?p=95', 0, 'post', '', 1),
+(96, 1, '2017-11-22 06:33:27', '2017-11-22 06:33:27', 'Chuyen De CMS', 'Chuyen De CMS', '', 'inherit', 'closed', 'closed', '', '95-revision-v1', '', '', '2017-11-22 06:33:27', '2017-11-22 06:33:27', '', 95, 'http://localhost:82/wordpress/index.php/2017/11/22/95-revision-v1/', 0, 'revision', '', 0),
+(97, 1, '2017-11-22 06:42:29', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-22 06:42:29', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=97', 0, 'post', '', 0),
+(98, 1, '2017-11-22 06:45:14', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-22 06:45:14', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=98', 0, 'post', '', 0),
+(99, 1, '2017-11-22 06:49:23', '0000-00-00 00:00:00', '{\n    "show_on_front": {\n        "value": "page",\n        "type": "option",\n        "user_id": 1\n    },\n    "page_for_posts": {\n        "value": "0",\n        "type": "option",\n        "user_id": 1\n    }\n}', '', '', 'auto-draft', 'closed', 'closed', '', 'f6734bc4-1210-46d0-8f2d-0bffb808feac', '', '', '2017-11-22 06:49:23', '2017-11-22 06:49:23', '', 0, 'http://localhost:82/wordpress/?p=99', 0, 'customize_changeset', '', 0),
+(100, 1, '2017-11-22 06:45:33', '0000-00-00 00:00:00', '{\n    "widget_categories[2]": {\n        "value": {\n            "encoded_serialized_instance": "YTo0OntzOjU6InRpdGxlIjtzOjEwOiJDYXRlZ29yaWVzIjtzOjU6ImNvdW50IjtpOjE7czoxMjoiaGllcmFyY2hpY2FsIjtpOjE7czo4OiJkcm9wZG93biI7aTowO30=",\n            "title": "Categories",\n            "is_widget_customizer_js_value": true,\n            "instance_hash_key": "95c9b8e1179827f7d4406e0776dcc39e"\n        },\n        "type": "option",\n        "user_id": 1\n    }\n}', '', '', 'auto-draft', 'closed', 'closed', '', '2e7ed3b7-67a8-4f5a-b529-25f4e3e1d726', '', '', '2017-11-22 06:45:33', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=100', 0, 'customize_changeset', '', 0),
+(101, 1, '2017-11-22 06:46:29', '2017-11-22 06:46:29', '{\n    "widget_categories[2]": {\n        "value": {\n            "encoded_serialized_instance": "YTo0OntzOjU6InRpdGxlIjtzOjEwOiJDYXRlZ29yaWVzIjtzOjU6ImNvdW50IjtpOjE7czoxMjoiaGllcmFyY2hpY2FsIjtpOjE7czo4OiJkcm9wZG93biI7aTowO30=",\n            "title": "Categories",\n            "is_widget_customizer_js_value": true,\n            "instance_hash_key": "95c9b8e1179827f7d4406e0776dcc39e"\n        },\n        "type": "option",\n        "user_id": 1\n    }\n}', '', '', 'trash', 'closed', 'closed', '', '5da08073-225c-4c21-9d5c-d8aa02faa629', '', '', '2017-11-22 06:46:29', '2017-11-22 06:46:29', '', 0, 'http://localhost:82/wordpress/index.php/2017/11/22/5da08073-225c-4c21-9d5c-d8aa02faa629/', 0, 'customize_changeset', '', 0),
+(102, 1, '2017-11-22 06:51:15', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-22 06:51:15', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=102', 0, 'post', '', 0),
+(103, 1, '2017-11-22 07:19:08', '2017-11-22 07:19:08', 'asdqwe', 'asdqwe', '', 'publish', 'open', 'open', '', 'asd', '', '', '2017-11-22 07:19:47', '2017-11-22 07:19:47', '', 0, 'http://localhost:82/wordpress/?p=103', 0, 'post', '', 0),
+(104, 1, '2017-11-22 07:19:08', '2017-11-22 07:19:08', 'asd', 'asd', '', 'inherit', 'closed', 'closed', '', '103-revision-v1', '', '', '2017-11-22 07:19:08', '2017-11-22 07:19:08', '', 103, 'http://localhost:82/wordpress/index.php/2017/11/22/103-revision-v1/', 0, 'revision', '', 0),
+(105, 1, '2017-11-22 07:19:47', '2017-11-22 07:19:47', 'asdqwe', 'asdqwe', '', 'inherit', 'closed', 'closed', '', '103-revision-v1', '', '', '2017-11-22 07:19:47', '2017-11-22 07:19:47', '', 103, 'http://localhost:82/wordpress/index.php/2017/11/22/103-revision-v1/', 0, 'revision', '', 0),
+(107, 1, '2017-11-22 07:41:22', '2017-11-22 07:41:22', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hello world!', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2017-11-22 07:41:22', '2017-11-22 07:41:22', '', 1, 'http://localhost:82/wordpress/index.php/2017/11/22/1-revision-v1/', 0, 'revision', '', 0),
+(108, 1, '2017-11-22 07:56:26', '0000-00-00 00:00:00', '{\n    "widget_categories[2]": {\n        "value": {\n            "encoded_serialized_instance": "YTo0OntzOjU6InRpdGxlIjtzOjEwOiJDYXRlZ29yaWVzIjtzOjU6ImNvdW50IjtpOjA7czoxMjoiaGllcmFyY2hpY2FsIjtpOjA7czo4OiJkcm9wZG93biI7aTowO30=",\n            "title": "Categories",\n            "is_widget_customizer_js_value": true,\n            "instance_hash_key": "376842d399d137845d2c5ffbe865b937"\n        },\n        "type": "option",\n        "user_id": 1\n    }\n}', '', '', 'auto-draft', 'closed', 'closed', '', 'b7e5e608-ebdd-4911-b691-dd2b3d984d8e', '', '', '2017-11-22 07:56:26', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=108', 0, 'customize_changeset', '', 0),
+(109, 1, '2017-11-22 07:59:41', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-22 07:59:41', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=109', 0, 'post', '', 0),
+(110, 1, '2017-11-22 09:08:03', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-22 09:08:03', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=110', 0, 'post', '', 0),
+(111, 1, '2017-11-22 09:10:12', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-22 09:10:12', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=111', 0, 'post', '', 0),
+(112, 1, '2017-11-22 09:10:16', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-22 09:10:16', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?p=112', 0, 'post', '', 0),
+(113, 1, '2017-11-22 09:10:18', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-11-22 09:10:18', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/wordpress/?page_id=113', 0, 'page', '', 0);
 
 -- --------------------------------------------------------
 
@@ -378,15 +414,18 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
-(1, 'Uncategorized', 'uncategorized', 0),
-(2, 'User', '5', 0);
+(12, 'CMS', 'hoc-cms', 0),
+(15, 'ACB', 'hoc-acb', 0),
+(16, 'PHP', 'hoc-php', 0),
+(21, 'CHA', '3', 0),
+(22, 'Laravel', 'hoc-laravel', 0);
 
 -- --------------------------------------------------------
 
@@ -408,9 +447,15 @@ CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
 (1, 1, 0),
+(1, 12, 0),
 (71, 1, 0),
 (74, 1, 0),
-(82, 1, 0);
+(74, 12, 0),
+(82, 1, 0),
+(82, 16, 0),
+(93, 1, 0),
+(95, 1, 0),
+(95, 15, 0);
 
 -- --------------------------------------------------------
 
@@ -428,15 +473,19 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
-(1, 1, 'category', '', 0, 2),
-(2, 2, 'category', '', 0, 0);
+(1, 1, 'category', 'Uncategorized', 0, 4),
+(12, 12, 'category', 'hoc lap trinh cms', 0, 2),
+(15, 15, 'category', 'Hoc acb', 12, 1),
+(16, 16, 'category', 'hoc lap trinh php', 0, 1),
+(21, 21, 'category', 'wqeqwe', 12, 0),
+(22, 22, 'category', 'Học laravel', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -452,7 +501,7 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=102 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=109 ;
 
 --
 -- Dumping data for table `wp_usermeta`
@@ -465,7 +514,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (4, 1, 'description', ''),
 (5, 1, 'rich_editing', 'true'),
 (6, 1, 'comment_shortcuts', 'false'),
-(7, 1, 'admin_color', 'fresh'),
+(7, 1, 'admin_color', 'blue'),
 (8, 1, 'use_ssl', '0'),
 (9, 1, 'show_admin_bar_front', 'true'),
 (10, 1, 'locale', ''),
@@ -473,7 +522,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (12, 1, 'wp_user_level', '10'),
 (13, 1, 'dismissed_wp_pointers', ''),
 (14, 1, 'show_welcome_panel', '1'),
-(15, 1, 'session_tokens', 'a:5:{s:64:"357b57a2a24f3e2a52ae256e46ffaa8a602879fc8a84e378710ba8ed5dbf4fd6";a:4:{s:10:"expiration";i:1511310437;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1511137637;}s:64:"52dc50ad9ca03dc7395884d9d02fa27afa19cd065fe0954f24853b5c40b0f6c6";a:4:{s:10:"expiration";i:1511310217;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1511137417;}s:64:"4fb5df14c4d732c0ec02bc48bef4fcd7c1fc71aa49eab27b71c27ae6e7f411da";a:4:{s:10:"expiration";i:1511310430;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36";s:5:"login";i:1511137630;}s:64:"db731199348fe4145e489ffdcbad15c4574e05cc29ceb75959e9851f729ea0a4";a:4:{s:10:"expiration";i:1511313932;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1511141132;}s:64:"66961671fd84e5bf2e3c472d2f34072bcb1ae1871831be5042af82a1613f0f10";a:4:{s:10:"expiration";i:1511314195;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36";s:5:"login";i:1511141395;}}'),
+(15, 1, 'session_tokens', 'a:5:{s:64:"3f0bf0e1b6faf306ddf26e2176b4da618c1a86eab3d30b9674aa371e5ff92bcf";a:4:{s:10:"expiration";i:1511504974;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1511332174;}s:64:"8b1ad99ed23c40ea4355e79ca26dc3fd19fc9b77fb02bca827070feee77d5145";a:4:{s:10:"expiration";i:1511504811;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1511332011;}s:64:"b1c4890817334036048822a64e58af6406f603972e6648b90b0b8feeabfb57f0";a:4:{s:10:"expiration";i:1511504598;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1511331798;}s:64:"25c3a263903284eddecf9e681a41b92bedfc96b0d201920d8b6a3d0665bfa95d";a:4:{s:10:"expiration";i:1511504880;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36";s:5:"login";i:1511332080;}s:64:"489ffecc16f4bd6f7c041b7810dd24e82abb791a284e2c5587066c2446324c3c";a:4:{s:10:"expiration";i:1511505694;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1511332894;}}'),
 (16, 1, 'wp_dashboard_quick_press_last_post_id', '69'),
 (30, 3, 'nickname', 'phuc'),
 (31, 3, 'first_name', 'Phuc'),
@@ -544,7 +593,13 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (98, 6, 'wp_user-settings', 'mfold=f'),
 (99, 6, 'wp_user-settings-time', '1511141381'),
 (100, 1, 'users_per_page', '20'),
-(101, 1, 'meta-box-order_dashboard', 'a:4:{s:6:"normal";s:38:"dashboard_right_now,dashboard_activity";s:4:"side";s:39:"dashboard_quick_press,dashboard_primary";s:7:"column3";s:0:"";s:7:"column4";s:0:"";}');
+(101, 1, 'meta-box-order_dashboard', 'a:4:{s:6:"normal";s:38:"dashboard_right_now,dashboard_activity";s:4:"side";s:39:"dashboard_quick_press,dashboard_primary";s:7:"column3";s:0:"";s:7:"column4";s:0:"";}'),
+(103, 4, 'wp_dashboard_quick_press_last_post_id', '91'),
+(104, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";i:4;s:15:"title-attribute";}'),
+(105, 1, 'metaboxhidden_nav-menus', 'a:2:{i:0;s:12:"add-post_tag";i:1;s:15:"add-post_format";}'),
+(106, 1, 'nav_menu_recently_edited', '13'),
+(107, 1, 'wp_user-settings', 'mfold=o'),
+(108, 1, 'wp_user-settings-time', '1511341807');
 
 -- --------------------------------------------------------
 
