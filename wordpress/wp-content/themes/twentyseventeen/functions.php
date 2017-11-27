@@ -12,6 +12,17 @@
 /**
  * Twenty Seventeen only works in WordPress 4.7 or later.
  */
+ wp_enqueue_style('jquery',
+        get_stylesheet_directory_uri() . '/assets/js/jquery-2.min.js');
+wp_enqueue_style('bootstrap', 
+        get_stylesheet_directory_uri() . '/assets/css/bootstrap-3-6-7.min.css');
+wp_enqueue_style('bootstrap', 
+        get_stylesheet_directory_uri() . '/assets/js/bootstrap-3-6-7.min.js');
+wp_enqueue_style('css',
+        get_stylesheet_directory_uri() .'/assets/css/843.css');
+wp_enqueue_style('font', 
+        get_stylesheet_directory_uri() .'/assets/css/font-awesome.min.css  ');
+		
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;

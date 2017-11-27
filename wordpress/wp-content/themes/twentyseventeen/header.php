@@ -18,6 +18,14 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>  
+    <a href="fonts/FontAwesome.otf"></a>
+
+    <link href="css/843.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
 
 <?php wp_head(); ?>
 </head>
