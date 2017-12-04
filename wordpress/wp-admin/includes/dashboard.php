@@ -289,6 +289,8 @@ function wp_dashboard_right_now() {
 		?>"><a href="edit-comments.php?comment_status=moderated" aria-label="<?php esc_attr_e( $aria_label ); ?>"><?php echo $text; ?></a></li>
 		<?php
 	}
+	$result = count_users();
+	echo '<li><a class="dashicons-smiley" href = "users.php">',$result['total_users'],"Users</a></li>";
 
 	/**
 	 * Filters the array of extra elements to list in the 'At a Glance'
